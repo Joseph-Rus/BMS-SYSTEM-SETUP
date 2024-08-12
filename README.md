@@ -2,7 +2,10 @@
 SEA-EV BMS coding git
 
 setting up a Windows system 
-
+use these YOUTUBE Vidoes to help walk through the BMS setup
+https://www.youtube.com/watch?v=PxQw5_7yI8Q
+https://www.youtube.com/watch?v=PxQw5_7yI8Q
+--------------------------------------------------------------------------------------------------------------------
 
 download from releases
 The BMS code 
@@ -23,36 +26,9 @@ click on double-click on paths, then add the paths of where the files are locate
 ![image](https://github.com/user-attachments/assets/63860b6d-62c6-4e9b-b36b-648beb148703)
 
 
+--------------------------------------------------------------------------------------------------------------------
 
-
-file setup 
-config.json
-launch.json
-
-Windows System setup for BMS system 
-
-Click this link to get system Requirements and the stlink Release
-http://Github.com/stlink-org/stlink
-click on the Debian Linux this is because a windows system can handle the Debian Linux because of sand box Linux subsystem that windows as add (if you do not have thin setup you will need to set it up) 
-
- 
-SYSTEM REQUIREMENTS
--	Cmake ( Download CMake )
--	Make ( Make for Windows (sourceforge.net) )
-Click on the Complete package, except sources
- 
--	Arm toolchain make sure you install GCC ( Downloads | GNU Arm Embedded Toolchain Downloads – Arm Developer )
- 
-You do not need laibusb and libgtk-dev
-
-Openocd install
-Download OpenOCD for Windows (gnutoolchains.com)
-
-Here are some good walk through videos this for openocd and setup
-https://www.youtube.com/watch?v=PxQw5_7yI8Q
-https://www.youtube.com/watch?v=PxQw5_7yI8Q
-
-Click on the win32 when in the main/main.cpp file and then click on the .json to make a .json file then input your information of board and compilerpath.
+Config
 
 ```
 {
@@ -84,25 +60,30 @@ Click on the win32 when in the main/main.cpp file and then click on the .json to
     "version": 4
 }
 ```
-BEFORE RUNNING THE COMMAND MAKE SURE TO SET THE (version)
-We are using the HV so set the number to 1 in the file location main/generalDefines.h/ENNOID_HV
- 
-Ater doing so run the command make to compiler
 
-
-
-
-
-
-
-
-After installing everything download the code from ( EnnoidMe/ENNOID-BMS-Firmware at ENNOID (github.com) )
-
-Part Needed
-Debugger ( STLINK-V3SET STMicroelectronics | Development Boards, Kits, Programmers | DigiKey )
-1x BMS testing Board 
-
-
-Section 32 loop back mode
-
+Launch.json We are using the Cortex Debug you will need to install the extension
+```
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "./main.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "device": "STM32F303CCT6",
+            "configFiles": [    
+                "interface/stlink-v2.cfg",
+                "target/stm32f3x.cfg"
+            ]
+        }
+    ]
+}
+```
 
