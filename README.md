@@ -48,7 +48,7 @@ https://www.youtube.com/watch?v=PxQw5_7yI8Q
 
 Click on the win32 when in the main/main.cpp file and then click on the .json to make a .json file then input your information of board and compilerpath.
 
-
+```
 {
     "configurations": [
         {
@@ -77,7 +77,7 @@ Click on the win32 when in the main/main.cpp file and then click on the .json to
     ],
     "version": 4
 }
-
+```
 BEFORE RUNNING THE COMMAND MAKE SURE TO SET THE (version)
 We are using the HV so set the number to 1 in the file location main/generalDefines.h/ENNOID_HV
  
