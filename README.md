@@ -4,20 +4,26 @@ SEA-EV BMS coding git
 setting up a Windows system 
 
 
-downloads
-code 
+download from releases
+The BMS code 
 make
 cmake
 openocd
 
 
-installing
+installing / add paths 
 
-cmake
-make
-openocd
+to add paths go to edit the system environment
 
-add paths
+Then click on Environment Variables 
+
+![image](https://github.com/user-attachments/assets/c40e6056-8f35-496f-ab62-afda7d11f964)
+
+click on double-click on paths, then add the paths of where the files are located.
+![image](https://github.com/user-attachments/assets/63860b6d-62c6-4e9b-b36b-648beb148703)
+
+
+
 
 file setup 
 config.json
