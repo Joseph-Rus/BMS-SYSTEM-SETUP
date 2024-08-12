@@ -108,9 +108,13 @@ Setting up the test board for Debugging
 ![Screenshot 2024-08-12 132140](https://github.com/user-attachments/assets/705d3aa7-614f-4db2-8535-6262cbcdb8f1)
 
 Blue - GND
+
 Red- 3v3
+
 Green - Stlink
+
 Orange - mini USB
+
 
 
 
